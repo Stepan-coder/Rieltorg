@@ -40,11 +40,11 @@ quit()
 # Создаём файлик с текстовыми даными о процедурах
 manager.create_DataSet("texts")
 manager.DataSet("texts").add_column(column_name="procedure_name",
-                                    values=manager.DataSet("proc").get_column("procedure_name").to_list())
+                                    values=manager.DataSet("proc").get_column("procedure_name"))
 manager.DataSet("texts").add_column(column_name="lot_subject",
-                                    values=manager.DataSet("proc").get_column("lot_subject").to_list())
+                                    values=manager.DataSet("proc").get_column("lot_subject"))
 manager.DataSet("texts").add_column(column_name="unit_name",
-                                    values=manager.DataSet("proc").get_column("unit_name").to_list())
+                                    values=manager.DataSet("proc").get_column("unit_name"))
 manager.DataSet("texts").set_delimiter(delimiter=";")
 manager.DataSet("texts").export()
 
